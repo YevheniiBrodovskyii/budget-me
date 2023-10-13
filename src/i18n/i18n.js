@@ -14,14 +14,13 @@ i18n
   .init({
     defaultLanguage: 'en',
     otherLanguages: ['pl'],
-    fallbackLng: 'en',
+    fallbackLng: 'en', 
     debug: true,
     saveMissing: true,
 
     backend: {
-      // cors-anywhere is a trick. Don't use it in production
-      loadPath: 'https://cors-anywhere.herokuapp.com/https://api.poeditor.com/v2/terms/list',
-      addPath: 'https://cors-anywhere.herokuapp.com/https://api.poeditor.com/v2/terms/add',
+      loadPath: 'https://api.poeditor.com/v2/terms/list',
+      addPath: 'https://api.poeditor.com/v2/terms/add',
       crossDomain: true,
       parse: data => {
         const parsedData = JSON.parse(data);
